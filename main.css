@@ -1,0 +1,127 @@
+body {
+	margin: 0;
+	padding: 0;
+	font-family: 'Open Sans', sans-serif;	
+}
+section {
+	height: 100vh;
+	position: relative;
+}
+.content {
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	width: 90%;
+	transform: translate(-50%, -50%);
+	text-align: center;
+}
+.title {
+	font-size: 30px;
+	font-weight: 700;
+	padding: 10px;
+	width: 300px;
+	margin: auto;
+	background-color: #fff;
+	background-size: 40px 400px;
+	-ms-transform: skew(-10deg); /* IE 9 */
+    -webkit-transform: skew(-10deg); /* Safari */
+    transform: skew(-10deg); /* Standard syntax */
+	}
+.text {
+	width: 60%;
+	margin: 10px auto;
+	font-weight: 300;
+}
+@media screen and (max-width: 480px) {
+	.content {
+		width: 100%;
+	}
+}
+#about {
+	background-color: #D49A6A;
+	color: #fff;
+}
+#about .title{
+	color: #D49A6A;
+}
+#portfolio {
+	background-color: #804515;
+	color: #fff;
+}
+#portfolio .title{
+	color: #804515;
+}
+#testimonials {
+	background-color: #552700;
+	color: #fff;
+}
+#testimonials .title{
+	color: #552700;
+}
+#contact {
+	background-color: #AA6C39;
+	color: #fff;
+}
+#contact .title{
+	color: #AA6C39;
+}
+nav {
+	position: fixed;
+	top: 50%;
+	transform: translateY(-50%);
+	right: 0;
+}
+nav ul {
+	list-style: none;
+}
+nav ul li {
+	margin: 20px 30px;
+}
+nav ul li a {
+	width: 8px;
+	text-decoration: none;
+	color: #333;
+	height: 8px;
+	background-color: #FFF;
+	border-radius: 50px;
+	display: block;
+	position: relative;
+	box-shadow: 0 0 4px rgba(0, 0, 0, 0.3);
+	transition: transform 0.2s;
+}
+nav ul li a span {
+	position: absolute;
+	right: 15px;
+	top: -5px;
+	font-size: 10px;
+	text-align: right;
+	visibility: hidden;
+	opacity: 0;
+	transition: right 0.3s;
+	padding: 2px 5px;
+	background-color: #fcfcfc;
+	border-radius: 1px;
+}
+nav ul li a span:before {
+	content: '';
+	position: absolute;
+	width: 0;
+	height: 0;
+	left: calc(100% - 1px);
+	top: calc(50% - 4px);
+	
+	border: 4px solid transparent;
+  	border-left: 4px solid #FFF;
+}
+nav li a:hover > span {
+	visibility: visible;
+	opacity: 1;
+	
+	/*right: 20px;*/
+}
+nav li a:hover, nav li.active a {
+	transform: scale(1.8);
+}
+nav li.active a {
+	background-color: #513B56;
+}

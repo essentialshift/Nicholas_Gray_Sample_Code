@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Sample Code For Creative Group - Fixed Nav</title>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link href='https://fonts.googleapis.com/css?family=Open+Sans:400,300,300italic,400italic,600italic,600,700,700italic' rel='stylesheet' type='text/css'>
+    <link rel="stylesheet" type="text/css" href="css/main.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+    
+    <script>
+$(document).ready(function(){
+  $("a").on('click', function(event) {
+
+    if (this.hash !== "") {
+      event.preventDefault();
+
+      var hash = this.hash;
+
+    
+      $('html, body').animate({
+        scrollTop: $(hash).offset().top
+      }, 600, function(){
+   
+        window.location.hash = hash;
+      });
+    } 
+  });
+});
+</script>
+
+</head>
+<body>
+<section id="about">
+    <div class="content">
+        <div class="title">About us</div>
+        <div class="text"><p>Nicholas attended the College of DuPage, earning a degree in Graphic Design and Advertising. With over seven years of hands-on experience in web development, SEO, graphics and web design, Nick brings a wealth of marketing experience to clients across the country.</p><p>Nick continually pushes himself to learn the latest in web development and design standards, making sure he stays current in the dynamic environment of cutting-edge technology and design tools. By immersing himself in professional techniques and emerging marketing trends, Nick ensures that he and his clients stay ahead of the game.</p><p>In his free time, Nick enjoys spending time with his wife and daughter. He loves camping and photography.</p></div>
+    </div>
+</section>
+
+<section id="portfolio">
+    <div class="content">
+        <div class="title">Portfolio</div>
+        <div class="text">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed at ante. Mauris eleifend, quam a vulputate dictum, massa quam dapibus leo, eget vulputate orci purus ut lorem. In fringilla mi in ligula.</div>
+    </div>
+</section>
+
+<section id="testimonials">
+    <div class="content">
+        <div class="title">Testimonials</div>
+        <div class="text">Having extensive graphic design skills, in addition to his top-notch web development skills, he was truly an added bonus and allowed full website development projects to be completed more efficiently. Nick’s professionalism, expert WordPress knowledge, calm demeanor in the face of stressful clients and deadlines, as well as his “outside of the box thinking” were truly a blessing. Nick’s ability to manipulate existing themes and plugins, in addition to creating custom implementations, allowed our company to extend our capabilities and provide our clients with better web solutions than previous.<br />- Ron LiVigni</div>
+    </div>
+</section>
+<section id="contact">
+    <div class="content">
+        <div class="title">Contact</div>
+        <div class="text"><strong>Nicholas Gray</strong><br />Phone: (630) 520 - 5330<br />Website: <a href="http://nickscottgray.com">NickScottGray.com</a></div>
+    </div>
+</section>
+<nav class="vertical-fixed-nav">
+    <ul>
+        <li class="about"><a href="#about"><span>About</span></a></li>
+        <li class="portfolio"><a href="#portfolio"><span>Portfolio</span></a></li>
+        <li class="testimonials"><a href="#testimonials"><span>Testimonials</span></a></li>
+        <li class="contact"><a href="#contact"><span>Contact</span></a></li>
+    </ul>
+</nav>
+</body>
+</html>
